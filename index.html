@@ -6,26 +6,27 @@
 <title>Home & Business IT Solutions</title>
 <style>
     :root {
-        --primary: #00f7ff;
-        --secondary: #00c3cc;
-        --dark-bg: #0a0a0a;
-        --card-bg: #141414;
-        --text-light: #f0f0f0;
-        --text-muted: #b5b5b5;
+        --primary: #0077cc;
+        --secondary: #00bfa5;
+        --light-bg: #f9f9f9;
+        --card-bg: #ffffff;
+        --text-dark: #333;
+        --text-muted: #666;
     }
 
     body {
         margin: 0;
         font-family: 'Segoe UI', sans-serif;
-        background-color: var(--dark-bg);
-        color: var(--text-light);
+        background-color: var(--light-bg);
+        color: var(--text-dark);
         line-height: 1.6;
     }
 
     /* HEADER & HERO */
     header {
-        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-        color: var(--text-light);
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                    url('https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        color: #fff;
         padding: 100px 20px;
         text-align: center;
     }
@@ -33,13 +34,11 @@
     header h1 {
         font-size: 3rem;
         margin-bottom: 10px;
-        color: var(--primary);
         animation: fadeInDown 1s ease;
     }
 
     header p {
         font-size: 1.3rem;
-        color: var(--text-muted);
         max-width: 700px;
         margin: auto;
         animation: fadeInUp 1.2s ease;
@@ -57,7 +56,8 @@
 
     /* NAVIGATION */
     nav {
-        background-color: #111;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -104,13 +104,12 @@
         padding: 25px;
         border-radius: 10px;
         text-align: center;
-        border: 1px solid #222;
-        transition: transform 0.3s, border-color 0.3s;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        transition: transform 0.3s;
     }
 
     .service-box:hover {
         transform: translateY(-5px);
-        border-color: var(--primary);
     }
 
     .service-box h3 {
@@ -118,7 +117,7 @@
         margin-bottom: 10px;
     }
 
-    /* STATS SECTION */
+    /* STATS */
     .stats {
         display: flex;
         flex-wrap: wrap;
@@ -132,7 +131,7 @@
         padding: 30px;
         border-radius: 10px;
         flex: 1 1 250px;
-        border: 1px solid #222;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         transition: transform 0.3s;
     }
 
@@ -151,130 +150,22 @@
         font-weight: bold;
     }
 
-    /* CONTACT FORM */
-    form {
+    /* ABOUT SECTION */
+    .about-container {
         display: flex;
-        flex-direction: column;
-        gap: 15px;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .about-container img {
         max-width: 500px;
-        margin: auto;
+        border-radius: 10px;
+        flex: 1 1 45%;
     }
 
-    input, textarea {
-        padding: 12px;
-        border: none;
-        border-radius: 5px;
-        background-color: #222;
-        color: var(--text-light);
-        resize: none;
+    .about-text {
+        flex: 1 1 45%;
     }
 
-    button {
-        background-color: var(--primary);
-        color: #000;
-        border: none;
-        padding: 12px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: background-color 0.3s;
-    }
-
-    button:hover {
-        background-color: var(--secondary);
-    }
-
-    /* FOOTER */
-    footer {
-        background-color: #111;
-        text-align: center;
-        padding: 20px;
-        font-size: 0.9rem;
-        color: var(--text-muted);
-        border-top: 2px solid var(--primary);
-    }
-</style>
-</head>
-<body>
-
-<header>
-    <h1>Home & Business IT Solutions</h1>
-    <p>Empowering homes and businesses with reliable, secure, and innovative technology services.</p>
-</header>
-
-<nav>
-    <a href="#services">Services</a>
-    <a href="#stats">Our Impact</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="service-box">
-            <h3>Computer Repair</h3>
-            <p>Fast and reliable hardware & software troubleshooting for all devices.</p>
-        </div>
-        <div class="service-box">
-            <h3>Network Setup</h3>
-            <p>Secure, high-speed home & office network installations.</p>
-        </div>
-        <div class="service-box">
-            <h3>Data Backup & Recovery</h3>
-            <p>Protect your valuable data and recover it when it matters most.</p>
-        </div>
-        <div class="service-box">
-            <h3>Cybersecurity</h3>
-            <p>Advanced protection against malware, ransomware, and online threats.</p>
-        </div>
-        <div class="service-box">
-            <h3>Business IT Support</h3>
-            <p>Proactive monitoring and maintenance to keep your business running.</p>
-        </div>
-        <div class="service-box">
-            <h3>Cloud Solutions</h3>
-            <p>Seamless cloud integration for storage, collaboration, and remote work.</p>
-        </div>
-    </div>
-</section>
-
-<section id="stats">
-    <h2>Our Impact</h2>
-    <div class="stats">
-        <div class="stat">
-            <h3>98%</h3>
-            <p>Customer Happiness</p>
-        </div>
-        <div class="stat">
-            <h3>99.9%</h3>
-            <p>Business Uptime</p>
-        </div>
-        <div class="stat">
-            <h3>97%</h3>
-            <p>Positive Feedback</p>
-        </div>
-    </div>
-</section>
-
-<section id="about">
-    <h2>About Us</h2>
-    <p>We are a dedicated IT solutions provider serving both home and business clients. Our mission is to deliver cutting-edge technology services that enhance productivity, security, and peace of mind. With years of experience and a passion for innovation, we help our clients stay ahead in an ever-changing digital world.</p>
-</section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
-<footer>
-    &copy; 2025 Home & Business IT Solutions. All rights reserved.
-</footer>
-
-</body>
-</html>
+    /* CONTACT FORM */
