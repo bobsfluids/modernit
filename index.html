@@ -1,128 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home & Business IT Solutions</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0d0d0d;
-            color: #f0f0f0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home & Business IT Solutions</title>
+<style>
+    :root {
+        --primary: #00f7ff;
+        --secondary: #00c3cc;
+        --dark-bg: #0a0a0a;
+        --card-bg: #141414;
+        --text-light: #f0f0f0;
+        --text-muted: #b5b5b5;
+    }
 
-        header {
-            background-color: #111;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #0ff;
-        }
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: var(--dark-bg);
+        color: var(--text-light);
+        line-height: 1.6;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: #0ff;
-        }
+    /* HEADER & HERO */
+    header {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        color: var(--text-light);
+        padding: 100px 20px;
+        text-align: center;
+    }
 
-        header p {
-            font-size: 1.1rem;
-            color: #ccc;
-        }
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        color: var(--primary);
+        animation: fadeInDown 1s ease;
+    }
 
-        nav {
-            text-align: center;
-            padding: 10px;
-            background-color: #181818;
-        }
+    header p {
+        font-size: 1.3rem;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: auto;
+        animation: fadeInUp 1.2s ease;
+    }
 
-        nav a {
-            color: #0ff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+    @keyframes fadeInDown {
+        from { transform: translateY(-20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    @keyframes fadeInUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
 
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+    /* NAVIGATION */
+    nav {
+        background-color: #111;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+    nav a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
 
-        .service-box {
-            background-color: #1a1a1a;
-            padding: 20px;
-            border: 1px solid #333;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
+    nav a:hover {
+        color: var(--secondary);
+    }
 
-        .service-box:hover {
-            transform: scale(1.03);
-            border-color: #0ff;
-        }
+    /* SECTIONS */
+    section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
 
-        h2 {
-            color: #0ff;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    h2 {
+        text-align: center;
+        color: var(--primary);
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+    /* SERVICES */
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
 
-        input, textarea {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-        }
+    .service-box {
+        background-color: var(--card-bg);
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #222;
+        transition: transform 0.3s, border-color 0.3s;
+    }
 
-        button {
-            background-color: #0ff;
-            color: #000;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+    .service-box:hover {
+        transform: translateY(-5px);
+        border-color: var(--primary);
+    }
 
-        button:hover {
-            background-color: #00cccc;
-        }
+    .service-box h3 {
+        color: var(--secondary);
+        margin-bottom: 10px;
+    }
 
-        footer {
-            background-color: #111;
-            text-align: center;
-            padding: 15px;
-            font-size: 0.9rem;
-            color: #888;
-            border-top: 2px solid #0ff;
-        }
-    </style>
+    /* STATS SECTION */
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .stat {
+        background-color: var(--card-bg);
+        padding: 30px;
+        border-radius: 10px;
+        flex: 1 1 250px;
+        border: 1px solid #222;
+        transition: transform 0.3s;
+    }
+
+    .stat:hover {
+        transform: scale(1.05);
+    }
+
+    .stat h3 {
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 5px;
+    }
+
+    .stat p {
+        color: var(--text-muted);
+        font-weight: bold;
+    }
+
+    /* CONTACT FORM */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    input, textarea {
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        background-color: #222;
+        color: var(--text-light);
+        resize: none;
+    }
+
+    button {
+        background-color: var(--primary);
+        color: #000;
+        border: none;
+        padding: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: var(--secondary);
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: #111;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        border-top: 2px solid var(--primary);
+    }
+</style>
 </head>
 <body>
 
 <header>
     <h1>Home & Business IT Solutions</h1>
-    <p>Your Technology, Our Expertise</p>
+    <p>Empowering homes and businesses with reliable, secure, and innovative technology services.</p>
 </header>
 
 <nav>
     <a href="#services">Services</a>
+    <a href="#stats">Our Impact</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
 </nav>
@@ -132,34 +214,52 @@
     <div class="services">
         <div class="service-box">
             <h3>Computer Repair</h3>
-            <p>Hardware and software troubleshooting for desktops and laptops.</p>
+            <p>Fast and reliable hardware & software troubleshooting for all devices.</p>
         </div>
         <div class="service-box">
             <h3>Network Setup</h3>
-            <p>Home and office network installation, Wi-Fi optimization, and security.</p>
+            <p>Secure, high-speed home & office network installations.</p>
         </div>
         <div class="service-box">
             <h3>Data Backup & Recovery</h3>
-            <p>Protect your files and restore lost data quickly and securely.</p>
+            <p>Protect your valuable data and recover it when it matters most.</p>
         </div>
         <div class="service-box">
             <h3>Cybersecurity</h3>
-            <p>Protect against viruses, ransomware, and online threats.</p>
+            <p>Advanced protection against malware, ransomware, and online threats.</p>
         </div>
         <div class="service-box">
             <h3>Business IT Support</h3>
-            <p>Ongoing maintenance, server management, and IT consulting.</p>
+            <p>Proactive monitoring and maintenance to keep your business running.</p>
         </div>
         <div class="service-box">
             <h3>Cloud Solutions</h3>
-            <p>Set up cloud storage, collaboration tools, and remote access.</p>
+            <p>Seamless cloud integration for storage, collaboration, and remote work.</p>
+        </div>
+    </div>
+</section>
+
+<section id="stats">
+    <h2>Our Impact</h2>
+    <div class="stats">
+        <div class="stat">
+            <h3>98%</h3>
+            <p>Customer Happiness</p>
+        </div>
+        <div class="stat">
+            <h3>99.9%</h3>
+            <p>Business Uptime</p>
+        </div>
+        <div class="stat">
+            <h3>97%</h3>
+            <p>Positive Feedback</p>
         </div>
     </div>
 </section>
 
 <section id="about">
     <h2>About Us</h2>
-    <p>We provide reliable, affordable, and friendly IT services for both homes and businesses. Whether you need a one-time repair or ongoing support, we have the skills and dedication to keep your technology running smoothly.</p>
+    <p>We are a dedicated IT solutions provider serving both home and business clients. Our mission is to deliver cutting-edge technology services that enhance productivity, security, and peace of mind. With years of experience and a passion for innovation, we help our clients stay ahead in an ever-changing digital world.</p>
 </section>
 
 <section id="contact">
