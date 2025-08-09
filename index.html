@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home & Business IT Solutions</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #0ff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #0ff;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        nav {
+            text-align: center;
+            padding: 10px;
+            background-color: #181818;
+        }
+
+        nav a {
+            color: #0ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-box {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .service-box:hover {
+            transform: scale(1.03);
+            border-color: #0ff;
+        }
+
+        h2 {
+            color: #0ff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #0ff;
+            color: #000;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #00cccc;
+        }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 2px solid #0ff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Home & Business IT Solutions</h1>
+    <p>Your Technology, Our Expertise</p>
+</header>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>Computer Repair</h3>
+            <p>Hardware and software troubleshooting for desktops and laptops.</p>
+        </div>
+        <div class="service-box">
+            <h3>Network Setup</h3>
+            <p>Home and office network installation, Wi-Fi optimization, and security.</p>
+        </div>
+        <div class="service-box">
+            <h3>Data Backup & Recovery</h3>
+            <p>Protect your files and restore lost data quickly and securely.</p>
+        </div>
+        <div class="service-box">
+            <h3>Cybersecurity</h3>
+            <p>Protect against viruses, ransomware, and online threats.</p>
+        </div>
+        <div class="service-box">
+            <h3>Business IT Support</h3>
+            <p>Ongoing maintenance, server management, and IT consulting.</p>
+        </div>
+        <div class="service-box">
+            <h3>Cloud Solutions</h3>
+            <p>Set up cloud storage, collaboration tools, and remote access.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>We provide reliable, affordable, and friendly IT services for both homes and businesses. Whether you need a one-time repair or ongoing support, we have the skills and dedication to keep your technology running smoothly.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2025 Home & Business IT Solutions. All rights reserved.
+</footer>
+
+</body>
+</html>
